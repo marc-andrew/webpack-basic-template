@@ -14,7 +14,9 @@ var htmlPlugin = new HtmlWebpackPlugin({
 var cleanPlugin = new CleanWebpackPlugin(['dist']);
 
 module.exports = {
-	entry: './src/js/app.js',
+	entry: {
+		app: './src/js/app.js'
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js'
@@ -53,6 +55,18 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]'
+						}
+					}
+				],
+				exclude: path.resolve(__dirname, 'src/index.html')
 			}
 		]
 	},
