@@ -5,10 +5,18 @@ This repository holds the source code of my Webpack basics template
 
 ### How to
 
-Install the plugins
+Install webpack and the plugins
 
 ```
-npm install webpack webpack-dev-server sass-loader node-sass css-loader extract-text-webpack-plugin babel-core babel-loader babel-preset-es2015 install html-loader html-webpack-plugin file-loader clean-webpack-plugin --save-dev
+npm i webpack --save-dev
+npm i html-webpack-plugin --save-dev
+npm i css-loader --save-dev
+npm i style-loader --save-dev
+npm i sass-loader node-sass --save-dev
+npm i extract-text-webpack-plugin --save-dev
+npm i webpack-dev-server --save-dev
+npm i babel-core babel-loader babel-preset-es2015 --save-dev
+npm i clean-webpack-plugin --save-dev
 ```
 
 ### Run webpack
@@ -16,11 +24,11 @@ npm install webpack webpack-dev-server sass-loader node-sass css-loader extract-
 Development
 
 ```
-npm run build
+npm run dev
 ```
 
 Production
 
 ```
-npm run build:prod
+npm run prod
 ```
